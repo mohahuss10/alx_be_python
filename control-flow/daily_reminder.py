@@ -22,4 +22,4 @@ if time_bound == "yes":
 elif priority == "low":
     message += ". Consider completing it when you have free time."
 
-print(message)
+print(f"{message}")
