@@ -1,9 +1,9 @@
 # control-flow/pattern_drawing.py
 
-rows = int(input("Enter the number of rows: "))
+size = int(input("Enter the size of the pattern: "))
 i = 1
 
-while i <= rows:
+while i <= size:
     j = 1
     while j <= i:
         print("*", end="")
