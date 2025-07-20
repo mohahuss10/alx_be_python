@@ -1,9 +1,8 @@
-size = int(input("enter the size of the patter"))
-row = 0
+# control-flow/pattern_drawing.py
 
-while row<size:
-    for _ in range(size):
-        print("*", end="")
-    print()
-    row +=1
-    
+rows = int(input("Enter the number of rows: "))
+i = 1
+
+while i <= rows:
+    print("*" * i)
+    i += 1
