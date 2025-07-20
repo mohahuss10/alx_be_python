@@ -1,9 +1,25 @@
-# control-flow/daily_reminder.py
+# daily_reminder.py
 
 task = input("Enter your task: ")
-reminders = int(input("How many times should I remind you? "))
+priority = input("Priority (high/medium/low): ")
+time_bound = input("Is it time-bound? (yes/no): ")
 
-count = 0
-while count < reminders:
-    print(f"Reminder: {task}")
-    count += 1
+priority = priority.lower()
+time_bound = time_bound.lower()
+
+match priority:
+    case "high":
+        message = f"Reminder: '{task}' is a high priority task"
+    case "medium":
+        message = f"Reminder: '{task}' is a medium priority task"
+    case "low":
+        message = f"Note: '{task}' is a low priority task"
+    case _:
+        message = f"Note: '{task}' has an unknown priority"
+
+if time_bound == "yes":
+    message += " that requires immediate attention today!"
+elif priority == "low":
+    message += ". Consider completing it when you have free time."
+
+print(message)
