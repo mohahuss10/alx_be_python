@@ -1,6 +1,6 @@
-# Global conversion factors - MUST BE DEFINED EXACTLY LIKE THIS
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+# Global conversion factors - must be exactly as specified
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 FREEZING_POINT_OFFSET = 32
 
 def convert_to_celsius(fahrenheit):
