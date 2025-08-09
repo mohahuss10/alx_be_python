@@ -2,7 +2,7 @@ class Book:
     def __init__(self,title,author,year):
         """constructor to initialize the book's title, author and year"""
         self.title =  title
-        self.autor = author
+        self.author = author
         self.year = year
 
     def __del__(self):
