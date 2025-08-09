@@ -1,17 +1,15 @@
-# polymorphism_demo.py
-
 class Shape:
     def area(self):
-        raise NotImplementedError("Subclasses must implement the area method")
+        raise NotImplementedError("Subclasses must implement this method")
 
 
-class Square(Shape):
-    def __init__(self, side):
-        self.side = side
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
     def area(self):
-        # Using exponentiation (** 2) to calculate the area
-        return self.side ** 2
+        return self.width * self.height
 
 
 class Circle(Shape):
@@ -19,5 +17,5 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        import math
-        return math.pi * (self.radius ** 2)
+        from math import pi
+        return pi * (self.radius ** 2)
